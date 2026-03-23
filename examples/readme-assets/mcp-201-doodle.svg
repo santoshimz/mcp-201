@@ -1,100 +1,94 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" role="img" aria-label="MCP-201 doodle">
-  <rect width="1200" height="640" fill="#fbfaf7"/>
+  <rect width="1200" height="640" fill="#fcfbf8"/>
+
   <g font-family="Comic Sans MS, Chalkboard SE, Marker Felt, sans-serif" fill="#111">
-    <text x="600" y="78" text-anchor="middle" font-size="58">MCP-201: AI-Planned Image Workflows</text>
+    <text x="600" y="78" text-anchor="middle" font-size="60">MCP-201: AI-Planned Image Skills</text>
   </g>
 
   <g stroke="#111" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="58" y="150" width="410" height="300" rx="20"/>
-    <line x1="58" y1="188" x2="468" y2="188"/>
-    <circle cx="86" cy="169" r="7"/>
-    <circle cx="112" cy="169" r="7"/>
-    <circle cx="138" cy="169" r="7"/>
-    <rect x="170" y="159" width="250" height="18" rx="9"/>
+    <path d="M68 152 q4 -8 18 -8 h356 q18 0 18 18 v276 q0 18 -18 18 h-356 q-18 0 -18 -18 z"/>
+    <path d="M68 188 h392"/>
+    <circle cx="98" cy="166" r="7"/>
+    <circle cx="124" cy="166" r="7"/>
+    <circle cx="150" cy="166" r="7"/>
+    <rect x="180" y="155" width="220" height="18" rx="9"/>
 
-    <rect x="96" y="214" width="210" height="92" rx="10"/>
-    <rect x="116" y="334" width="95" height="98" rx="10"/>
-    <rect x="232" y="334" width="95" height="98" rx="10"/>
-    <rect x="348" y="334" width="80" height="98" rx="10"/>
+    <path d="M110 214 h210 v96 h-210 z"/>
+    <path d="M114 332 h98 v102 h-98 z"/>
+    <path d="M230 332 h98 v102 h-98 z"/>
+    <path d="M346 332 h76 v102 h-76 z"/>
 
-    <rect x="520" y="235" width="168" height="145" rx="14"/>
-    <path d="M688 260 C732 270, 752 300, 748 338"/>
-    <rect x="545" y="205" width="110" height="30" rx="8"/>
-    <rect x="548" y="354" width="125" height="30" rx="8"/>
+    <path d="M528 242 q0 -12 14 -12 h132 q14 0 14 14 v132 q0 14 -14 14 h-132 q-14 0 -14 -14 z"/>
+    <rect x="534" y="214" width="98" height="28" rx="6"/>
+    <rect x="550" y="362" width="110" height="28" rx="6"/>
 
-    <rect x="770" y="152" width="362" height="296" rx="20"/>
-    <rect x="808" y="252" width="118" height="128" rx="10"/>
-    <rect x="952" y="252" width="132" height="128" rx="10"/>
-    <path d="M926 316 L952 316"/>
-    <path d="M1084 316 L1118 316"/>
+    <path d="M734 152 q0 -16 18 -16 h360 q18 0 18 18 v284 q0 18 -18 18 h-360 q-18 0 -18 -18 z"/>
+    <path d="M770 234 h122 v148 h-122 z"/>
+    <path d="M930 234 h150 v148 h-150 z"/>
 
-    <path d="M430 312 L510 312"/>
-    <path d="M500 294 L530 312 L500 330"/>
-    <path d="M688 312 L760 312"/>
-    <path d="M750 294 L780 312 L750 330"/>
+    <path d="M390 312 h102"/>
+    <path d="M480 294 l34 18 -34 18"/>
+    <path d="M688 312 h56"/>
+    <path d="M732 294 l34 18 -34 18"/>
+    <path d="M892 312 h28"/>
+    <path d="M908 294 l34 18 -34 18"/>
 
-    <rect x="826" y="472" width="105" height="52" rx="10"/>
-    <rect x="982" y="472" width="98" height="52" rx="10"/>
+    <rect x="798" y="476" width="106" height="50" rx="8"/>
+    <rect x="982" y="476" width="96" height="50" rx="8"/>
   </g>
 
   <g font-family="Comic Sans MS, Chalkboard SE, Marker Felt, sans-serif" fill="#111">
-    <text x="110" y="252" font-size="34">"Figure out the</text>
-    <text x="110" y="290" font-size="34">right workflow</text>
-    <text x="110" y="328" font-size="34">for these images"</text>
+    <text x="96" y="250" font-size="26">Plan and run the best</text>
+    <text x="96" y="282" font-size="26">workflow for these images</text>
 
-    <text x="566" y="276" font-size="28">AI</text>
-    <text x="552" y="312" font-size="28">Planner</text>
-    <text x="542" y="346" font-size="28">+ MCP</text>
-    <text x="560" y="225" font-size="20">plan_prompt</text>
-    <text x="560" y="375" font-size="20">run_prompt_workflow</text>
+    <text x="546" y="233" font-size="17">plan_prompt</text>
+    <text x="566" y="286" font-size="28">AI</text>
+    <text x="548" y="319" font-size="28">Planner</text>
+    <text x="548" y="350" font-size="28">+ MCP</text>
+    <text x="564" y="381" font-size="17">run_workflow</text>
 
-    <text x="846" y="505" font-size="32">before</text>
-    <text x="1000" y="505" font-size="32">after</text>
+    <text x="816" y="510" font-size="31">before</text>
+    <text x="1000" y="510" font-size="31">after</text>
   </g>
 
   <g stroke="#111" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="163" cy="378" r="27"/>
-    <path d="M148 375 q15 -12 30 0"/>
-    <path d="M150 392 q14 10 26 0"/>
-    <path d="M160 405 l0 18"/>
-    <path d="M145 433 l18 -10 18 10"/>
+    <circle cx="164" cy="380" r="27"/>
+    <path d="M149 377 q15 -12 30 0"/>
+    <path d="M152 395 q12 8 24 0"/>
+    <path d="M164 407 v16"/>
+    <path d="M151 438 l13 -8 13 8"/>
 
-    <circle cx="279" cy="378" r="27"/>
-    <path d="M264 375 q15 -12 30 0"/>
-    <path d="M266 392 q14 10 26 0"/>
-    <path d="M276 405 l0 18"/>
-    <path d="M261 433 l18 -10 18 10"/>
+    <circle cx="280" cy="380" r="27"/>
+    <path d="M265 377 q15 -12 30 0"/>
+    <path d="M268 395 q12 8 24 0"/>
+    <path d="M280 407 v16"/>
+    <path d="M267 438 l13 -8 13 8"/>
 
-    <circle cx="388" cy="378" r="22"/>
-    <path d="M375 376 q13 -10 26 0"/>
-    <path d="M378 391 q10 8 20 0"/>
-    <path d="M388 401 l0 15"/>
-    <path d="M375 427 l13 -8 13 8"/>
+    <circle cx="384" cy="380" r="22"/>
+    <path d="M371 378 q13 -10 26 0"/>
+    <path d="M374 394 q10 7 20 0"/>
+    <path d="M384 404 v14"/>
+    <path d="M373 432 l11 -7 11 7"/>
 
-    <circle cx="867" cy="307" r="33"/>
-    <path d="M849 302 q18 -14 36 0"/>
-    <path d="M853 320 q14 12 28 0"/>
-    <path d="M867 339 l0 22"/>
-    <path d="M850 373 l18 -10 18 10"/>
+    <circle cx="831" cy="304" r="34"/>
+    <path d="M812 300 q19 -14 38 0"/>
+    <path d="M817 320 q14 10 28 0"/>
+    <path d="M831 340 v21"/>
+    <path d="M813 382 l18 -10 18 10"/>
 
-    <circle cx="1018" cy="304" r="36" fill="#f8d4b8"/>
-    <path d="M998 299 q20 -14 40 0"/>
-    <path d="M1002 320 q16 12 32 0"/>
-    <path d="M1018 340 l0 23"/>
-    <path d="M998 381 l20 -12 20 12"/>
-    <path d="M992 285 q14 -24 52 -14"/>
+    <circle cx="1006" cy="300" r="38" fill="#f5d0af"/>
+    <path d="M986 296 q20 -14 40 0"/>
+    <path d="M991 318 q15 10 30 0"/>
+    <path d="M1006 340 v22"/>
+    <path d="M986 385 l20 -11 20 11"/>
+    <path d="M978 284 q15 -24 52 -14"/>
   </g>
 
-  <g fill="#111" font-family="Comic Sans MS, Chalkboard SE, Marker Felt, sans-serif">
-    <text x="742" y="262" font-size="22">choose tools</text>
-    <text x="704" y="412" font-size="22">validate plan</text>
-  </g>
-
-  <g stroke="#111" stroke-width="3" fill="none">
-    <path d="M1060 220 l8 -18"/>
-    <path d="M1070 226 l18 -8"/>
-    <path d="M970 224 l6 -16"/>
-    <path d="M978 230 l16 -6"/>
+  <g stroke="#111" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M954 214 l8 -18"/>
+    <path d="M964 220 l16 -8"/>
+    <path d="M1060 206 l7 -16"/>
+    <path d="M1068 212 l16 -7"/>
     <path d="M1088 352 l7 -14"/>
     <path d="M1096 358 l14 -7"/>
   </g>

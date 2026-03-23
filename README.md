@@ -1,6 +1,12 @@
 # mcp-201
 
-![mcp-201 doodle](examples/readme-assets/mcp-201-doodle.svg)
+<p align="center">
+  <img
+    src="./examples/readme-assets/mcp-201-doodle.svg"
+    alt="MCP-201 architecture overview"
+    width="960"
+  />
+</p>
 
 `mcp-201` is an independent repo with its own backend and frontend.
 
@@ -73,5 +79,6 @@ Deploy frontend to Vercel:
 
 ## Docs
 
+- agent handoff, architecture, usage, and extension guide: `docs/AGENT_HANDOFF.md`
 - backend setup and Railway deploy: `backend/README.md`
 - frontend setup and Vercel deploy: `frontend/README.md`

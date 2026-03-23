@@ -1,0 +1,7 @@
+mcp[cli]
+google-genai
+Pillow
+pydantic>=2,<3
+python-multipart
+starlette>=0.40,<1
+uvicorn>=0.30,<1

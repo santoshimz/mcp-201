@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+backend/.venv/
+backend/.env
+backend/src/*.egg-info/
+
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
+
+mcp_201/
+tests/
+pyproject.toml
+Dockerfile
+examples/request.json

@@ -16,6 +16,7 @@ export default function HomePage() {
   const [result, setResult] = useState<DemoResult | null>(null)
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
+  const [activeOutputIndex, setActiveOutputIndex] = useState<number | null>(null)
   const appName = process.env.NEXT_PUBLIC_APP_NAME || "MCP-201 Web"
 
   const submitDisabled = loading || files.length === 0 || !prompt.trim() || (credentialMode === "byok" && !geminiApiKey.trim())
@@ -55,6 +56,8 @@ export default function HomePage() {
       setLoading(false)
     }
   }
+
+  const activeOutput = activeOutputIndex !== null && result ? result.outputs[activeOutputIndex] : null
 
   return (
     <main className="app-shell">
@@ -135,40 +138,108 @@ export default function HomePage() {
           {error ? <p className="error">{error}</p> : null}
         </form>
 
-        <aside className="panel">
-          <h2>Results</h2>
+        <aside className="panel results-panel">
+          <div className="results-header">
+            <div>
+              <p className="results-eyebrow">Output gallery</p>
+              <h2>Results</h2>
+            </div>
+            {result ? <p className="results-count">{result.outputs.length} image{result.outputs.length === 1 ? "" : "s"}</p> : null}
+          </div>
           {result ? (
             <>
-              <p><strong>Workflow:</strong> {result.selected_workflow}</p>
-              <p><strong>Images:</strong> {result.image_count}</p>
-              <p><strong>Outputs:</strong> {result.outputs.length}</p>
+              <div className="result-meta">
+                <div className="result-stat">
+                  <span>Workflow</span>
+                  <strong>{result.selected_workflow}</strong>
+                </div>
+                <div className="result-stat">
+                  <span>Inputs</span>
+                  <strong>{result.image_count}</strong>
+                </div>
+                <div className="result-stat">
+                  <span>Outputs</span>
+                  <strong>{result.outputs.length}</strong>
+                </div>
+              </div>
               {result.warnings.length ? (
-                <ul>
+                <ul className="warning-list">
                   {result.warnings.map((warning) => (
                     <li key={warning}>{warning}</li>
                   ))}
                 </ul>
               ) : null}
               <div className="result-grid">
-                {result.outputs.map((output) => (
+                {result.outputs.map((output, index) => {
+                  const outputSrc = `data:${output.media_type};base64,${output.content_base64}`
+
+                  return (
                   <article className="result-card" key={output.filename}>
-                    <Image
-                      src={`data:${output.media_type};base64,${output.content_base64}`}
-                      alt={output.filename}
-                      width={640}
-                      height={480}
-                      unoptimized
-                    />
-                    <p>{output.filename}</p>
+                    <button
+                      type="button"
+                      className="result-preview-button"
+                      onClick={() => setActiveOutputIndex(index)}
+                    >
+                      <div className="result-preview">
+                        <Image
+                          src={outputSrc}
+                          alt={output.filename}
+                          width={1200}
+                          height={900}
+                          unoptimized
+                        />
+                      </div>
+                      <span className="result-preview-hint">Click to expand</span>
+                    </button>
+                    <div className="result-card-footer">
+                      <div>
+                        <p>{output.filename}</p>
+                        <span>Output {index + 1}</span>
+                      </div>
+                      <a href={outputSrc} download={output.filename} className="download-link">
+                        Download
+                      </a>
+                    </div>
                   </article>
-                ))}
+                  )
+                })}
               </div>
             </>
           ) : (
-            <p>No results yet.</p>
+            <p className="empty-results">Run a workflow to see polished output previews here.</p>
           )}
         </aside>
       </section>
+
+      {activeOutput ? (
+        <div className="lightbox" role="dialog" aria-modal="true" aria-label="Expanded output preview">
+          <button type="button" className="lightbox-backdrop" onClick={() => setActiveOutputIndex(null)} aria-label="Close preview" />
+          <div className="lightbox-content">
+            <button type="button" className="lightbox-close" onClick={() => setActiveOutputIndex(null)}>
+              Close
+            </button>
+            <div className="lightbox-image-shell">
+              <Image
+                src={`data:${activeOutput.media_type};base64,${activeOutput.content_base64}`}
+                alt={activeOutput.filename}
+                width={1600}
+                height={1200}
+                unoptimized
+              />
+            </div>
+            <div className="lightbox-caption">
+              <strong>{activeOutput.filename}</strong>
+              <a
+                href={`data:${activeOutput.media_type};base64,${activeOutput.content_base64}`}
+                download={activeOutput.filename}
+                className="download-link"
+              >
+                Download
+              </a>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </main>
   )
 }

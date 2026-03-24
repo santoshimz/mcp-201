@@ -41,7 +41,7 @@ class Settings:
 
         return cls(
             host=os.environ.get("MCP_201_HOST", "0.0.0.0").strip() or "0.0.0.0",
-            port=int(os.environ.get("MCP_201_PORT", "8010")),
+            port=int(os.environ.get("MCP_201_PORT") or os.environ.get("PORT") or "8010"),
             max_images=int(os.environ.get("MCP_201_MAX_IMAGES", "5")),
             max_file_size_bytes=int(os.environ.get("MCP_201_MAX_FILE_SIZE_BYTES", str(6 * 1024 * 1024))),
             require_auth=require_auth,
